@@ -1,0 +1,145 @@
+:root {
+  /* Primary Color */
+  --paleBlue: hsl(225, 100%, 94%);
+  --brightBlue: hsl(245, 75%, 52%);
+
+  /* Neutral Color */
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --ligthBlue: hsl(256, 68%, 71%);
+  --darkBlue: hsl(223, 47%, 23%);
+
+  /* Font */
+  --font01: "Red Hat Display", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  background-color: var(--paleBlue);
+  font-family: var(--font01);
+}
+
+p {
+  color: var(--desaturatedBlue);
+}
+
+.container {
+  width: 90%;
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.container__img {
+  background-image: url(/images/illustration-hero.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 18rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.container__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.info__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.info__text {
+  margin-bottom: 2rem;
+}
+
+.info__price {
+  background-color: var(--veryPaleBlue);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.price__plan {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.5rem 0 0 1rem;
+  line-height: 1.5;
+}
+.price__plan span {
+  color: black;
+  font-weight: bold;
+}
+
+.info__price a {
+  color: var(--brightBlue);
+}
+
+.info__price a:hover {
+  text-decoration: none;
+  color: var(--ligthBlue);
+}
+
+.button {
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: var(--brightBlue);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0px 20px 15px 0px rgba(56, 41, 224, 0.2);
+}
+.button:hover {
+  background-color: var(--ligthBlue);
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.cancel {
+  margin-top: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--desaturatedBlue);
+}
+
+@media (min-width: 375px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 40rem;
+  }
+  .container__info {
+    padding: 2rem 4rem;
+  }
+}
